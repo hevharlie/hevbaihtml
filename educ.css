@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(pek.jpg); /* Add your background image file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This ensures the background image doesn't scroll with the content */
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: orange;
+}
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 70px;
+}
+.photo {
+    width: 400px;
+    height: 400px;
+    margin: 40px;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #3d3d3d;
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.photo:hover {
+    transform: scale(1.1);
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+.photo-text {
+    color: orange;
+    font-size: 18px;
+    text-align: center;
+}
